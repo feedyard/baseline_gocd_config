@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="92">
+  <server artifactsdir="artifacts" siteUrl="http://ec2-54-89-119-120.compute-1.amazonaws.com:8153" secureSiteUrl="https://ec2-54-89-119-120.compute-1.amazonaws.com:8154" agentAutoRegisterKey="e5c56276-be00-47f2-8bfc-92bef98e9f60" commandRepositoryLocation="default" serverId="af37d520-eddd-4dbd-acee-311cff4278ef">
+    <security>
+      <authConfigs>
+        <authConfig id="auth-config-id" pluginId="cd.go.authentication.passwordfile">
+          <property>
+            <key>PasswordFilePath</key>
+            <value>/godata/config/password.properties</value>
+          </property>
+        </authConfig>
+      </authConfigs>
+    </security>
+  </server>
+  <config-repos>
+    <config-repo plugin="yaml.config.plugin">
+      <git url="https://github.com/feedyard/baseline_gocd_config" />
+    </config-repo>
+  </config-repos>
+  <pipelines></pipelines>
+</cruise>

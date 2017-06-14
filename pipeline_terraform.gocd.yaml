@@ -1,0 +1,28 @@
+---
+pipelines:
+  Terraform: # reference architecture aws terraform pipeline
+    group: Baseline
+    locking: off
+    materials:
+      github:
+        git: https://github.com/feedyard/baseline_tf.git
+        branch: master
+    stages:
+      - build:
+          clean_workspace: true
+          jobs:
+            slackTriggerBuild:
+              tasks:
+                - plugin:
+                    options:
+                      WebhookUrl: https://hooks.slack.com/services/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
+                      ChannelType: Channel
+                      Channel: deploy
+                      DisplayName: 'baseline_tf pipeline'
+                      Title: Build stage triggered
+                      Message: The baseline_tf pipeline has detected a merge in the baseline_tf repo and the build has been triggered
+                      ColorType: none
+                      IconOrEMoji:
+                    configuration:
+                      id: slack.task
+                      version: 1

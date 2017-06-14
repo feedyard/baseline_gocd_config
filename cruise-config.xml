@@ -14,7 +14,7 @@
   </server>
   <config-repos>
     <config-repo plugin="yaml.config.plugin">
-      <git url="https://github.com/feedyard/baseline_gocd_config" />
+      <git url="https://github.com/feedyard/baseline_gocd_config.git" />
     </config-repo>
   </config-repos>
   <pipelines></pipelines>

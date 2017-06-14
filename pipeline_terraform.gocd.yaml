@@ -15,7 +15,7 @@ pipelines:
               tasks:
                 - plugin:
                     options:
-                      WebhookUrl: https://hooks.slack.com/services/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
+                      WebhookUrl: 
                       ChannelType: Channel
                       Channel: deploy
                       DisplayName: 'baseline_tf pipeline'

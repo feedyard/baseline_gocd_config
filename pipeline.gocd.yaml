@@ -15,7 +15,7 @@ pipelines:
               tasks:
                 - plugin:
                     options:
-                      WebhookUrl: 
+                      WebhookUrl:
                       ChannelType: Channel
                       Channel: deploy
                       DisplayName: 'baseline_tf pipeline'
